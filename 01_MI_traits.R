@@ -52,3 +52,9 @@ p <- ggplot(data=df, aes(x=reorder(trait, proportion), y=proportion)) +
 pdf("trait_prop_MIflora.pdf", height=5, width=9)
 p + coord_flip()
 dev.off()
+
+
+
+subset0[subset0$scrubbed_species_binomial=="Rosa multiflora",]
+
+
