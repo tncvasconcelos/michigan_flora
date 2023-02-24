@@ -1,9 +1,10 @@
 
 setwd("~/Desktop/michigan_flora")
-
-petiole_test <- read.csv("petiole_test.csv")
+petiole_test <- read.csv("trait_data/2023_02_23_rosaceae_per_specimen.csv")
 colnames(petiole_test)[1] <- "species"
 all_species <- unique(petiole_test$species)
+
+
 
 all_tests <- as.data.frame(matrix(ncol=3, nrow=0))
 for(i in 1:length(all_species)) {
@@ -22,5 +23,7 @@ for(i in 1:length(all_species)) {
   }
   all_tests <- rbind(all_tests, results)
 }
+
+
 
 
